@@ -113,9 +113,18 @@ function Game() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <h1 className={styles.title}>SPACE SNEK</h1>
-        <div className={styles.score}>SCORE: {score}</div>
-      </header>
+	  <div className={styles.headerTop}>
+	    <h1 className={styles.title}>SPACE SNEK</h1>
+	    <div className={styles.status}>
+	      <span className={styles.statusDot}></span>
+	      ONLINE
+	    </div>
+	  </div>
+	  <div className={styles.headerBottom}>
+	    <span className={styles.scoreLabel}>CURRENT SCORE</span>
+	    <span className={styles.scoreValue}>{String(score).padStart(6, '0')}</span>
+	  </div>
+	</header>
       <main className={styles.main}>
         <div className={styles.canvasWrapper}>
           {gameOver && <div className={styles.gameOver}>SIGNAL LOST</div>}

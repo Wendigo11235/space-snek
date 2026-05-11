@@ -7,24 +7,62 @@
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   max-width: 400px;
   margin-bottom: 1.5rem;
+  border: 1px solid #1a3a3a;
+  background: rgba(0, 20, 20, 0.6);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #1a3a3a;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #00ff88;
+  letter-spacing: 0.2em;
+}
+
+.status {
+  font-size: 0.7rem;
+  color: #00ff88;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00ff88;
+  display: inline-block;
+}
+
+.headerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scoreLabel {
+  font-size: 0.65rem;
+  color: #5a7a80;
   letter-spacing: 0.15em;
 }
 
-.score {
-  font-size: 0.9rem;
+.scoreValue {
+  font-size: 1.1rem;
   color: #a0b4b7;
   letter-spacing: 0.1em;
 }
