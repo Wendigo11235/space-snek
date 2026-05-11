@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import styles from './Game.module.css'
 
 const CELL = 20
 const COLS = 20
@@ -28,15 +29,15 @@ function Game() {
     if (!canvas) return
     const ctx = canvas.getContext('2d')
 
-    ctx.fillStyle = '#000'
+    ctx.fillStyle = '#0a0f10'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-    ctx.fillStyle = '#00ff00'
+    ctx.fillStyle = '#00ff88'
     snake.current.forEach(seg => {
       ctx.fillRect(seg.x * CELL, seg.y * CELL, CELL - 1, CELL - 1)
     })
 
-    ctx.fillStyle = '#ff0000'
+    ctx.fillStyle = '#ff4444'
     ctx.fillRect(apple.current.x * CELL, apple.current.y * CELL, CELL - 1, CELL - 1)
   }
 
@@ -110,18 +111,25 @@ function Game() {
   }, [])
 
   return (
-    <div>
-      <p>Score: {score}</p>
-      {gameOver && <p>Game Over</p>}
-      <canvas
-        ref={canvasRef}
-        width={COLS * CELL}
-        height={ROWS * CELL}
-      />
-      <br />
-      <button onClick={startGame}>
-        {gameOver ? 'Play Again' : 'Start'}
-      </button>
+    <div className={styles.page}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>SPACE SNEK</h1>
+        <div className={styles.score}>SCORE: {score}</div>
+      </header>
+      <main className={styles.main}>
+        <div className={styles.canvasWrapper}>
+          {gameOver && <div className={styles.gameOver}>SIGNAL LOST</div>}
+          <canvas
+            ref={canvasRef}
+            width={COLS * CELL}
+            height={ROWS * CELL}
+            className={styles.canvas}
+          />
+        </div>
+        <button className={styles.button} onClick={startGame}>
+          {gameOver ? 'RECONNECT' : 'INITIALIZE'}
+        </button>
+      </main>
     </div>
   )
 }

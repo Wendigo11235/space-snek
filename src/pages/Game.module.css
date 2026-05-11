@@ -1,0 +1,75 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #1a3a3a;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #00ff88;
+  letter-spacing: 0.15em;
+}
+
+.score {
+  font-size: 0.9rem;
+  color: #a0b4b7;
+  letter-spacing: 0.1em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.canvasWrapper {
+  position: relative;
+  border: 1px solid #1a3a3a;
+}
+
+.canvas {
+  display: block;
+}
+
+.gameOver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff4444;
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  z-index: 10;
+  background-color: rgba(10, 15, 16, 0.85);
+  padding: 1rem 2rem;
+}
+
+.button {
+  background: transparent;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  padding: 0.6rem 2rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: rgba(0, 255, 136, 0.1);
+}

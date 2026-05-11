@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { EveFrontierProvider } from '@evefrontier/dapp-kit'
 import './styles/index.css'
 import App from './App'
+import '@mysten/dapp-kit/dist/index.css'
 
 const queryClient = new QueryClient()
 

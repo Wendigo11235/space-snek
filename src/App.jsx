@@ -3,7 +3,7 @@ import Game from './pages/Game'
 
 function App() {
   return (
-    <div>
+    <div data-dapp-kit>
       <Game />
     </div>
   )

@@ -1,0 +1,33 @@
+[data-dapp-kit] {
+  --dapp-kit-colors-body: #a0b4b7;
+  --dapp-kit-colors-bodyMuted: #5a7a80;
+  --dapp-kit-backgroundColors-body: #0a0f10;
+  --dapp-kit-backgroundColors-modalOverlay: rgba(0, 0, 0, 0.8);
+  --dapp-kit-typography-fontFamily: 'Share Tech Mono', monospace;
+  --dapp-kit-typography-fontStyle: normal;
+  --dapp-kit-typography-lineHeight: 1.5;
+  --dapp-kit-typography-letterSpacing: 0.05em;
+  --dapp-kit-fontSizes-small: 12px;
+  --dapp-kit-fontSizes-medium: 14px;
+  --dapp-kit-fontSizes-large: 18px;
+  --dapp-kit-fontSizes-xlarge: 24px;
+  --dapp-kit-fontWeights-normal: 400;
+  --dapp-kit-fontWeights-bold: 700;
+
+  background-color: var(--dapp-kit-backgroundColors-body);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a0f10;
+  margin: 0;
+  padding: 0;
+}
